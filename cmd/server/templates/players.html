@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Players - 7 Wonders Pro League</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>7 Wonders Pro League</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/players">Players</a></li>
+          <li><a href="/matches">Matches</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <h2>Players</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{range .Players}}
+            <tr>
+              <td>{{.Id}}</td>
+              <td>{{.Name}}</td>
+              <td><a href="/players/{{.Id}}">View</a></td>
+            </tr>
+          {{end}}
+        </tbody>
+      </table>
+      <form method="post" action="/players">
+        <h3>Create New Player</h3>
+        <div>
+          <div><label for="name">Name:</label></div>
+          <div><input type="text" name="name" value="" /></div>
+        </div>
+        <div>
+          <button type="submit">Create</button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+</html>
