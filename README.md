@@ -2,7 +2,7 @@
 
 ## Download
 
-    $ git clone git@github.com:craigjackson/7wpl.git $GOPATH/src/7wpl
+    $ git clone https://github.com/craigjackson/7wpl.git $GOPATH/src/7wpl
 
 ## Setup Database
 
